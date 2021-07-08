@@ -72,8 +72,8 @@ android {
 }
 
 dependencies {
-  def fragmentVersion = '1.3.5'
-  def testCoreVersion = '1.4.0'
+  def fragmentVersion = '1.4.0-alpha04' // TODO: Change it to a stable version when available
+  def androidxTestVersion = '1.4.0'
   def junitVersion = '4.13.2'
   def mockkVersion = '1.12.0'
   def espressoVersion = '3.4.0'
@@ -106,15 +106,15 @@ dependencies {
   playstoreImplementation 'com.google.android.gms:play-services-cast-framework:20.0.0'
   playstoreImplementation 'com.google.android.play:core:1.10.0'
 
-  testImplementation "androidx.test:core:$testCoreVersion"
+  testImplementation "androidx.test:core:$androidxTestVersion"
   testImplementation "io.mockk:mockk:$mockkVersion"
   testImplementation "junit:junit:$junitVersion"
   testImplementation 'org.robolectric:robolectric:4.5.1'
   testImplementation 'org.skyscreamer:jsonassert:1.5.0'
 
-  androidTestImplementation "androidx.test:core:$testCoreVersion"
-  androidTestImplementation "androidx.test:rules:1.4.0"
-  androidTestImplementation "androidx.test:runner:1.4.0"
+  androidTestImplementation "androidx.test:core:$androidxTestVersion"
+  androidTestImplementation "androidx.test:rules:$androidxTestVersion"
+  androidTestImplementation "androidx.test:runner:$androidxTestVersion"
   androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
   androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
   androidTestImplementation "androidx.test.espresso:espresso-intents:$espressoVersion"
